@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html class=" js no-touch" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your page description here">
+    <meta name="author" content="">
+    <link href="css/test.css" rel="stylesheet">
+</head>
+
+<body>
+	
+	<nav role='navigation'>
+	<div class="logo">
+		<a href="Welcome.html"><img src="img/Logo.png" width ="60px" height = "60px"></a>
+	</div>
+	<ul>
+	
+		<li> <a href="Welcome.html">Welcome </a> 								</li>
+		<li> <a href="Team.html">Team</a> 									</li>
+		<li> <a href="Apply.html">Apply Now!</a> 							</li>
+	</ul>
+	
+	</nav>
+	
+	<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+	<div>
+	<br><center>	<font size=5 > <b> LOGIN </b> </font> 			<br> <br>
+					Username: <input type="text" id = "usern">		<br> <br>
+					Password: <input type="password" id = "passw">	<br> <br>				
+					<button onclick = "output()">Login</button>		<br><br> 
+					<h6>*Note: &nbsp;username: admin <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					password: admin	</h6>
+	<center>
+	</div>
+	
+
+	<script type="text/javascript">
+		
+		function output() {
+		
+			var user, pass;
+			
+			user = document.getElementById("usern").value; 
+			pass = document.getElementById("passw").value; 
+			
+			if ( user == "" ) {
+				alert ( "Enter Username" );
+			}
+			else if ( user != "admin" ) {
+				alert ( "Username does not exist" );
+			}
+			else if ( pass != "admin" && user == "admin") {
+				alert ( "Incorrect Password" );
+			}
+			else if ( user == "admin" && pass == "admin" ) {
+				window.location.replace("view.php");
+			}			
+			
+		}
+		
+	</script>
+	
+</body>
+</html>
